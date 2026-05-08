@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <div class="card border-danger shadow-sm">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Something went wrong</h4>
+      </div>
+      <div class="card-body">
+        <p class="lead text-danger mb-3"><strong><%= err.status || 500 %></strong> — <%= err.message || 'Unexpected error' %></p>
+        <pre class="small text-muted bg-light p-3 rounded"><%= err.stack %></pre>
+        <a href="/campgrounds" class="btn btn-danger mt-3">Return Home</a>
+      </div>
+    </div>
+  </div>
+</div>

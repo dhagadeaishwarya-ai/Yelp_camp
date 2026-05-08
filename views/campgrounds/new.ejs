@@ -7,42 +7,54 @@
 
       <h1 class="mb-4 text-center">Create New Campground</h1>
 
-      <form action="/campgrounds" method="POST">
+      <form action="/campgrounds" method="POST" novalidate class="needs-validation">
 
         <!-- Title -->
         <div class="mb-3">
           <label for="title" class="form-label">Campground Title</label>
           <input type="text" id="title" name="campground[title]" 
                  class="form-control" placeholder="Enter campground name" required>
-        </div>
+        <div class="invalid-feedback">
+  Please fill this field
+</div>
+</div>
+        
 
         <!-- Location -->
         <div class="mb-3">
           <label for="location" class="form-label">Location</label>
           <input type="text" id="location" name="campground[location]" 
                  class="form-control" placeholder="Enter location" required>
-        </div>
+        <div class="invalid-feedback">
+  Please fill this field
+</div></div>
 
         <!-- Image -->
         <div class="mb-3">
           <label for="image" class="form-label">Image URL</label>
           <input type="text" id="image" name="campground[image]" 
-                 class="form-control" placeholder="Paste image URL">
-        </div>
+                 class="form-control" placeholder="Paste image URL" required>
+        <div class="invalid-feedback">
+  Please fill this field
+</div></div>
 
         <!-- Price -->
         <div class="mb-3">
           <label for="price" class="form-label">Price (per night)</label>
           <input type="number" id="price" name="campground[price]" 
                  class="form-control" placeholder="0.00" min="0" step="0.01" required>
-        </div>
+        <div class="invalid-feedback">
+  Please fill this field
+</div></div>
 
         <!-- Description -->
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
           <textarea id="description" name="campground[description]" 
-                    class="form-control" rows="4"></textarea>
-        </div>
+                    class="form-control" rows="4" required></textarea>
+        <div class="invalid-feedback">
+  Please fill this field
+</div></div>
 
         <!-- Buttons -->
         <div class="d-grid mb-3">
